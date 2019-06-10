@@ -6,7 +6,7 @@ export default class Viewer extends Component {
     return (
       <Grid divided>
         <Grid.Row>
-          <iframe width="100%"  height="500px" title="FC-Viewer" id="FC-Loader"></iframe>
+          <iframe width="100%"  height="500px" title="FC-Viewer" srcDoc= {this.props.script}></iframe>
         </Grid.Row>
       </Grid>
     )

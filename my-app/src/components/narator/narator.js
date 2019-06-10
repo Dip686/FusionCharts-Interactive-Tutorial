@@ -8,11 +8,11 @@ export default class Narator extends Component {
       <Grid divided="vertically">
         <Grid.Row>
           <Menu widths={1}>
-            <Menu.Item>Step - 4</Menu.Item>
+            <Menu.Item>Step - {this.props.step.id}</Menu.Item>
           </Menu>
         </Grid.Row>
         <Grid.Row>
-          <StepDetails/>
+          <StepDetails navHandler= {this.props.navHandler} step = {this.props.step}/>
         </Grid.Row>
       </Grid>
     )

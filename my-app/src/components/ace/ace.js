@@ -9,8 +9,8 @@ import 'brace/ext/language_tools';
 import 'brace/snippets/html';
 
 export default class Editor extends Component {
-  onChange(newValue) {
-    console.log('change', newValue);
+  onChange = (newValue) => {
+    this.props.updateSrc(newValue);
   }
   render() {
     return (
@@ -26,7 +26,7 @@ export default class Editor extends Component {
         showPrintMargin={true}
         showGutter={true}
         highlightActiveLine={true}
-        value={`<script src='https://dasdsadasddasdsadasd_sdasdasdasdsadsa_asdasdasd.com'>,/script>`}
+        value={this.props.script}
         setOptions={{
           enableBasicAutocompletion: true,
           enableLiveAutocompletion: true,
